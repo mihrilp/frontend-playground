@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="weather-app fade-in" id="weatherApp">
+      <div class="app-header">
+        <h1 class="app-title">Weather</h1>
+        <p class="app-subtitle">Check current weather conditions</p>
+      </div>
+
+      <div class="search-container">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search for a city..."
+          />
+          <button class="search-btn" id="searchBtn">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <button class="location-btn" id="locationBtn">
+          <i class="fas fa-location-dot"></i>
+          Use Current Location
+        </button>
+      </div>
+
+      <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Getting weather data...</div>
+      </div>
+
+      <div class="error-message" id="errorMessage">
+        <i class="fas fa-exclamation-triangle"></i>
+        Something went wrong. Please try again later.
+      </div>
+
+      <div class="weather-card" id="weatherCard">
+        <div class="location-info">
+          <div class="city-name" id="cityName">New York</div>
+          <div class="date-time" id="dateTime">Monday, October 23, 2023</div>
+        </div>
+
+        <div class="main-weather">
+          <div class="weather-icon" id="weatherIcon">☀️</div>
+          <div class="temperature" id="temperature">24°</div>
+          <div class="weather-desc" id="weatherDesc">Sunny</div>
+          <div class="temp-range" id="tempRange">H:28° L:18°</div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="detail-label">Visibility</div>
+            <div class="detail-value" id="visibility">10 km</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-droplet"></i>
+            </div>
+            <div class="detail-label">Humidity</div>
+            <div class="detail-value" id="humidity">65%</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-wind"></i>
+            </div>
+            <div class="detail-label">Wind</div>
+            <div class="detail-value" id="windSpeed">12 km/h</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-thermometer-half"></i>
+            </div>
+            <div class="detail-label">Feels Like</div>
+            <div class="detail-value" id="feelsLike">26°</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-compress-arrows-alt"></i>
+            </div>
+            <div class="detail-label">Pressure</div>
+            <div class="detail-value" id="pressure">1013 hPa</div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="detail-label">UV Index</div>
+            <div class="detail-value" id="uvIndex">6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
